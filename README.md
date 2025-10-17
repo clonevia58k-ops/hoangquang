@@ -1,1 +1,3076 @@
 # hoang-11a34
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                   _ooOoo_
+                  o8888888o
+                  88" . "88
+                  (| -_- |)
+                  O\  =  /O
+               ____/`---'\____
+             .'  \\|     |//  `.
+            /  \\|||  :  |||//  \
+           /  _||||| -:- |||||-  \
+           |   | \\\  -  /// |   |
+           | \_|  ''\---/''  |   |
+           \  .-\__  `-`  ___/-. /
+         ___`. .'  /--.--\  `. . __
+      ."" '<  `.___\_<|>_/___.'  >'"".
+     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+     \  \ `-.   \_ __\ /__ _/   .-` /  /
+======`-.____`-.___\_____/___.-`____.-'======
+                   `=---='
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       PHẬT ĐỘ   KHÔNG LỖI   KHÔNG BUG
+              Quang Hoang
+        Xin đừng coppy của em.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết về người phụ nữ Việt Nam tôi yêu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://files.catbox.moe/r0i4sf.jpg" >
+    <meta name="description" content="Viết về người phụ nữ Việt Nam tôi yêu">
+    <meta name="keywords" content="Viết về người phụ nữ Việt Nam tôi yêu">
+    <meta name="keywords" content="qhoang,website,profile">
+    <meta property="og:title" content="Người phụ nữ Việt Nam ~">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi-VN">
+    <meta property="og:url" content="https://Qhoang.com">
+    <meta property="og:image" content="https://files.catbox.moe/i7wu9k.png">
+    <meta property="og:site_name" content="Qhoanghoang">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    min-height: 100vh;
+    color: #2d3436;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+.loading-logo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+    from { text-shadow: 0 0 20px rgba(255,255,255,0.5); }
+    to { text-shadow: 0 0 30px rgba(255,255,255,0.8), 0 0 40px rgba(255,255,255,0.3); }
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255,255,255,0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Welcome Notification */
+.welcome-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: linear-gradient(135deg, #ff9ff3 0%, #feca57 50%, #ff9ff3 100%);
+    background-size: 200% 200%;
+    color: #2d3436;
+    padding: 20px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: welcomeShow 0.6s ease forwards, welcomePulse 2s ease-in-out 0.6s infinite, welcomeHide 0.5s ease 9.5s forwards;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+@keyframes welcomeShow {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes welcomePulse {
+    0%, 100% {
+        background-position: 0% 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        background-position: 100% 50%;
+        transform: translate(-50%, -50%) scale(1.02);
+    }
+}
+
+@keyframes welcomeHide {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.hero-bg-image[style*="display: none"] {
+    opacity: 0;
+}
+
+.hero-fallback-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    z-index: 0;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    height: auto;
+    padding: 20px;
+}
+
+.hero-header {
+    flex-shrink: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.hero-text-content {
+    flex: 1;
+    text-align: left;
+    max-width: 80%;
+}
+
+.hero-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+}
+
+.hero-main-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero-main-image:hover {
+    transform: scale(1.05);
+}
+
+/* Header mới */
+.header {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.header:hover {
+    transform: translateY(-5px);
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #ff7675, #55efc4, #74b9ff, #a29bfe);
+    animation: gradientFlow 5s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-header .header-content {
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-logo {
+    flex: 0 0 auto;
+}
+
+.logo-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.header-center {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+}
+
+.class-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff7675, #55efc4, #74b9ff, #a29bfe);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 3s ease-in-out infinite;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-header .class-title {
+    color: #ffffff;
+    background: linear-gradient(45deg, #ffffff, #f8f9fa, #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gradientText {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 8px 12px;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    color: #495057;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+.nav-item:hover {
+    background: linear-gradient(45deg, #ff7675, #55efc4);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-header .nav-item {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.hero-header .nav-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 10px 0;
+}
+
+.sticky-header.show {
+    top: 0;
+}
+
+.sticky-header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.sticky-logo {
+    flex: 0 0 auto;
+}
+
+.sticky-logo-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-logo-img:hover {
+    transform: scale(1.1);
+}
+
+.sticky-center {
+    flex: 1;
+    text-align: center;
+    min-width: 250px;
+}
+
+.sticky-class-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff7675, #55efc4, #74b9ff, #a29bfe);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 3s ease-in-out infinite;
+    margin-bottom: 5px;
+}
+
+.sticky-navigation-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.sticky-nav-item {
+    display: inline-block;
+    padding: 4px 8px;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    color: #495057;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+.sticky-nav-item:hover {
+    background: linear-gradient(45deg, #ff7675, #55efc4);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn, .sticky-mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span, .sticky-mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: #2d3436;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-btn.active span:nth-child(1), .sticky-mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2), .sticky-mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3), .sticky-mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 9998;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.mobile-menu-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 280px;
+    height: 100%;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobile-menu-overlay.show .mobile-menu-content {
+    transform: translateX(0);
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-menu-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(45deg, #ff7675, #55efc4, #74b9ff, #a29bfe);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 3s ease-in-out infinite;
+}
+
+.mobile-menu-close {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+    transform: scale(1.1);
+}
+
+.mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-nav-item {
+    display: block;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.mobile-nav-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 25px 0;
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.3;
+}
+
+.hero-text-content .main-title {
+    font-size: 2.8rem;
+    margin: 20px 0;
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(45deg, #ffffff, #f8f9fa, #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textShine 3s ease-in-out infinite;
+}
+
+@keyframes textShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: #636e72;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.hero-text-content .subtitle {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.content-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 0;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.section-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-divider {
+    width: 60px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.section-body {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.section-text {
+    flex: 1;
+}
+
+.section-image {
+    flex: 1;
+    text-align: center;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.content-image:hover {
+    transform: scale(1.05);
+}
+
+.section-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.section-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-content {
+    font-size: 1.05rem;
+    color: #4b5e6b;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(45deg, #fd79a8 0%, #ff6b6b 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+    transform: scale(1.02);
+}
+
+.image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.15), transparent);
+    animation: shine 4s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.activities-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activities-list li {
+    background: #f8f9fa;
+    margin: 12px 0;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #55efc4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activities-list li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 0;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.story-section .section-header {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+    position: relative;
+}
+
+.story-section .section-header::after {
+    content: '🔍';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.story-section:hover .section-header::after {
+    transform: scale(1.3);
+}
+
+.qualities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.quality-item {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quality-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.quality-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ff7675;
+}
+
+.quote-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 0;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.quote-section .section-header {
+    background: linear-gradient(135deg, #81ecec 0%, #ffcccc 100%);
+}
+
+.quote-section .section-text {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #2d3436;
+}
+
+.footer {
+    background: #2d3436;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.author-name {
+    color: #55efc4;
+    font-weight: 700;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background: #ffffff;
+    margin: 5% auto;
+    padding: 35px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 650px;
+    position: relative;
+    animation: modalSlideIn 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes modalSlideIn {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #636e72;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #2d3436;
+}
+
+/* Tablet Design */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .header-content {
+        gap: 15px;
+    }
+
+    .navigation-menu {
+        gap: 4px;
+    }
+
+    .nav-item {
+        font-size: 0.75rem;
+        padding: 6px 8px;
+    }
+
+    .sticky-navigation-menu {
+        gap: 3px;
+    }
+
+    .sticky-nav-item {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sticky-logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .welcome-notification {
+        max-width: 85%;
+        font-size: 1.05rem;
+        padding: 20px 28px;
+    }
+
+    .hero-section {
+        height: 450px;
+    }
+
+    .hero-text {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .hero-text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-image-section {
+        max-width: 100%;
+    }
+
+    .hero-text-content .main-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-text-content .subtitle {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .content-section {
+        margin-bottom: 30px;
+    }
+
+    .section-body {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .section-header {
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-image {
+        height: 150px;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-center {
+        min-width: auto;
+        order: 2;
+        flex: 1;
+    }
+
+    .header-logo {
+        order: 1;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        order: 3;
+    }
+
+    .navigation-menu {
+        display: none;
+    }
+
+    .class-title {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+
+    .sticky-header-content {
+        justify-content: space-between;
+    }
+
+    .sticky-center {
+        min-width: auto;
+        flex: 1;
+    }
+
+    .sticky-navigation-menu {
+        display: none;
+    }
+
+    .sticky-mobile-menu-btn {
+        display: flex;
+    }
+
+    .sticky-class-title {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .image-placeholder {
+        height: 180px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .welcome-notification {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        max-width: 95%;
+        font-size: 1rem;
+        padding: 18px 25px;
+        border-radius: 25px;
+    }
+
+    .hero-section {
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero-text {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .hero-text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-image-section {
+        max-width: 100%;
+    }
+
+    .hero-main-image {
+        max-width: 250px;
+    }
+
+    .hero-text-content .main-title {
+        font-size: 2rem;
+        margin: 15px 0;
+    }
+
+    .hero-text-content .subtitle {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .hero-header .header-content {
+        padding: 12px 15px;
+    }
+
+    .sticky-header-content {
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .sticky-center {
+        min-width: auto;
+    }
+
+    .sticky-class-title {
+        font-size: 1.3rem;
+    }
+
+    .sticky-navigation-menu {
+        gap: 3px;
+    }
+
+    .sticky-nav-item {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+
+    .sticky-logo-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .section-body {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .section-header {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .content-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.7rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .welcome-message {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .welcome-notification {
+        max-width: 95%;
+        font-size: 0.95rem;
+        padding: 16px 22px;
+        border-radius: 20px;
+        line-height: 1.4;
+    }
+
+    .hero-section {
+        height: 350px;
+    }
+
+    .hero-text {
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .hero-main-image {
+        max-width: 200px;
+    }
+
+    .hero-text-content .main-title {
+        font-size: 1.8rem;
+        margin: 12px 0;
+    }
+
+    .hero-text-content .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .welcome-notification {
+        max-width: 98%;
+        font-size: 0.9rem;
+        padding: 14px 18px;
+        border-radius: 18px;
+        line-height: 1.3;
+    }
+
+    .hero-section {
+        height: 320px;
+    }
+
+    .hero-text {
+        gap: 12px;
+        padding: 12px 8px;
+    }
+
+    .hero-main-image {
+        max-width: 150px;
+    }
+
+    .hero-text-content .main-title {
+        font-size: 1.6rem;
+        margin: 10px 0;
+    }
+
+    .hero-text-content .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+}
+
+/* ===== ENHANCED ANIMATIONS & EFFECTS ===== */
+
+/* Floating particles background */
+.floating-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { width: 4px; height: 4px; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { width: 6px; height: 6px; left: 20%; animation-delay: 1s; }
+.particle:nth-child(3) { width: 3px; height: 3px; left: 30%; animation-delay: 2s; }
+.particle:nth-child(4) { width: 5px; height: 5px; left: 40%; animation-delay: 3s; }
+.particle:nth-child(5) { width: 4px; height: 4px; left: 50%; animation-delay: 4s; }
+.particle:nth-child(6) { width: 6px; height: 6px; left: 60%; animation-delay: 5s; }
+.particle:nth-child(7) { width: 3px; height: 3px; left: 70%; animation-delay: 1.5s; }
+.particle:nth-child(8) { width: 5px; height: 5px; left: 80%; animation-delay: 2.5s; }
+.particle:nth-child(9) { width: 4px; height: 4px; left: 90%; animation-delay: 3.5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Enhanced hero section animations */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced text animations */
+.hero-text-content .main-title {
+    animation: titleGlow 4s ease-in-out infinite alternate;
+    position: relative;
+}
+
+.hero-text-content .main-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: textShimmer 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes titleGlow {
+    0% { text-shadow: 0 0 20px rgba(255,255,255,0.5); }
+    100% { text-shadow: 0 0 30px rgba(255,255,255,0.8), 0 0 40px rgba(255,255,255,0.3); }
+}
+
+@keyframes textShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced card hover effects */
+.content-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.content-section:hover::before {
+    left: 100%;
+}
+
+/* Enhanced image animations */
+.content-image, .hero-main-image, .gallery-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.content-image::before, .hero-main-image::before, .gallery-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.content-image:hover::before, .hero-main-image:hover::before, .gallery-image:hover::before {
+    transform: translateX(100%);
+}
+
+/* Enhanced quality items */
+.quality-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.quality-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.quality-item:hover::before {
+    transform: scale(1);
+}
+
+.quality-icon {
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Enhanced navigation items */
+.nav-item, .sticky-nav-item, .mobile-nav-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before, .sticky-nav-item::before, .mobile-nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-item:hover::before, .sticky-nav-item:hover::before, .mobile-nav-item:hover::before {
+    left: 100%;
+}
+
+/* Enhanced section headers */
+.section-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: headerShimmer 3s ease-in-out infinite;
+}
+
+@keyframes headerShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced loading screen */
+.loading-screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: loadingShimmer 2s ease-in-out infinite;
+}
+
+@keyframes loadingShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced welcome notification */
+.welcome-notification {
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-notification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: welcomeShimmer 2s ease-in-out infinite;
+}
+
+@keyframes welcomeShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced modal */
+.modal-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: modalShimmer 3s ease-in-out infinite;
+}
+
+@keyframes modalShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced footer */
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+    animation: footerShimmer 4s ease-in-out infinite;
+}
+
+@keyframes footerShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced scroll animations */
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInScale {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Enhanced button animations */
+.nav-item, .sticky-nav-item, .mobile-nav-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item:hover, .sticky-nav-item:hover, .mobile-nav-item:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Enhanced image hover effects */
+.content-image, .hero-main-image, .gallery-image {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-image:hover, .hero-main-image:hover, .gallery-image:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Enhanced quality item animations */
+.quality-item {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quality-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Enhanced section animations */
+.content-section, .story-section, .quote-section {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-section:hover, .story-section:hover, .quote-section:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Enhanced logo animations */
+.logo-img, .sticky-logo-img {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-img:hover, .sticky-logo-img:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Enhanced activities list */
+.activities-list li {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.activities-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(85, 239, 196, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.activities-list li:hover::before {
+    left: 100%;
+}
+
+.activities-list li:hover {
+    transform: translateX(15px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Enhanced mobile menu */
+.mobile-menu-content {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-item:hover {
+    transform: translateX(15px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Enhanced sticky header */
+.sticky-header {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sticky-header.show {
+    animation: stickySlideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes stickySlideDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+/* Enhanced video container */
+#loiketVideo {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#loiketVideo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Ripple effect styles */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Pulse animation for important elements */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Enhanced entrance animations */
+.animate-in {
+    animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Enhanced hover states with better transitions */
+.nav-item, .sticky-nav-item, .mobile-nav-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item:hover, .sticky-nav-item:hover, .mobile-nav-item:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Enhanced section hover effects */
+.content-section:hover, .story-section:hover, .quote-section:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Enhanced image hover with 3D effect */
+.content-image:hover, .hero-main-image:hover, .gallery-image:hover {
+    transform: scale(1.08) rotate(1deg) translateZ(10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Enhanced quality item hover */
+.quality-item:hover {
+    transform: translateY(-10px) scale(1.05) rotate(1deg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Enhanced logo hover with rotation */
+.logo-img:hover, .sticky-logo-img:hover {
+    transform: scale(1.15) rotate(5deg) translateZ(5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Enhanced activities list hover */
+.activities-list li:hover {
+    transform: translateX(15px) scale(1.02) rotate(0.5deg);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Enhanced mobile menu animations */
+.mobile-menu-content {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-item:hover {
+    transform: translateX(15px) scale(1.05) rotate(1deg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Enhanced sticky header with smooth slide */
+.sticky-header.show {
+    animation: stickySlideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced video hover */
+#loiketVideo:hover {
+    transform: scale(1.05) rotate(0.5deg);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Enhanced loading screen with better transitions */
+.loading-screen {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced welcome notification */
+.welcome-notification {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced modal animations */
+.modal-content {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced footer animations */
+.footer {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced section headers */
+.section-header {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced gallery grid animations */
+.gallery-item {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Enhanced hero section animations */
+.hero-section {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-text-content {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced button animations with better easing */
+button, .btn, .nav-item, .sticky-nav-item, .mobile-nav-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced image animations with 3D perspective */
+.content-image, .hero-main-image, .gallery-image {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Enhanced card animations */
+.content-section, .story-section, .quote-section {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Enhanced quality grid animations */
+.qualities-grid {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced activities list animations */
+.activities-list {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced mobile menu overlay */
+.mobile-menu-overlay {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced sticky header animations */
+.sticky-header {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced video container animations */
+#loiketVideo {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== ENHANCED IMAGE ANIMATIONS ===== */
+
+/* Floating animation for all images */
+.content-image, .hero-main-image, .gallery-image, .logo-img, .sticky-logo-img {
+    animation: gentleFloat 6s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.5s);
+}
+
+@keyframes gentleFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    25% { 
+        transform: translateY(-3px) rotate(0.5deg); 
+    }
+    50% { 
+        transform: translateY(-5px) rotate(0deg); 
+    }
+    75% { 
+        transform: translateY(-2px) rotate(-0.5deg); 
+    }
+}
+
+/* Breathing animation for hero image */
+.hero-main-image {
+    animation: gentleFloat 6s ease-in-out infinite, gentleBreath 4s ease-in-out infinite;
+    animation-delay: 0s, 1s;
+}
+
+@keyframes gentleBreath {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.02); 
+    }
+}
+
+/* Subtle rotation for gallery images */
+.gallery-image {
+    animation: gentleFloat 6s ease-in-out infinite, gentleRotate 8s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.3s), calc(var(--i, 0) * 0.2s);
+}
+
+@keyframes gentleRotate {
+    0%, 100% { 
+        transform: rotate(0deg); 
+    }
+    25% { 
+        transform: rotate(0.5deg); 
+    }
+    50% { 
+        transform: rotate(0deg); 
+    }
+    75% { 
+        transform: rotate(-0.5deg); 
+    }
+}
+
+/* Gentle sway for content images */
+.content-image {
+    animation: gentleFloat 6s ease-in-out infinite, gentleSway 5s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.4s), calc(var(--i, 0) * 0.3s);
+}
+
+@keyframes gentleSway {
+    0%, 100% { 
+        transform: translateX(0px); 
+    }
+    50% { 
+        transform: translateX(2px); 
+    }
+}
+
+/* Logo gentle bounce */
+.logo-img, .sticky-logo-img {
+    animation: gentleFloat 6s ease-in-out infinite, gentleBounce 3s ease-in-out infinite;
+    animation-delay: 0s, 0.5s;
+}
+
+@keyframes gentleBounce {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-2px); 
+    }
+}
+
+/* Enhanced hover effects for images */
+.content-image:hover, .hero-main-image:hover, .gallery-image:hover {
+    animation-play-state: paused;
+    transform: scale(1.08) rotate(1deg) translateZ(10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gentle pulse for important images */
+.hero-main-image {
+    animation: gentleFloat 6s ease-in-out infinite, gentleBreath 4s ease-in-out infinite, gentlePulse 3s ease-in-out infinite;
+    animation-delay: 0s, 1s, 2s;
+}
+
+@keyframes gentlePulse {
+    0%, 100% { 
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+    }
+    50% { 
+        box-shadow: 0 12px 35px rgba(0,0,0,0.25); 
+    }
+}
+
+/* Subtle shimmer effect for images */
+.content-image::after, .hero-main-image::after, .gallery-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: imageShimmer 3s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes imageShimmer {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* Enhanced image containers */
+.content-image, .hero-main-image, .gallery-image {
+    position: relative;
+    overflow: hidden;
+    --i: 0;
+}
+
+/* Staggered animation delays for multiple images */
+.content-image:nth-child(1) { --i: 0; }
+.content-image:nth-child(2) { --i: 1; }
+.content-image:nth-child(3) { --i: 2; }
+.content-image:nth-child(4) { --i: 3; }
+
+.gallery-image:nth-child(1) { --i: 0; }
+.gallery-image:nth-child(2) { --i: 1; }
+.gallery-image:nth-child(3) { --i: 2; }
+.gallery-image:nth-child(4) { --i: 3; }
+
+/* Gentle wave animation for image groups */
+.qualities-grid .quality-item img,
+.section-image img {
+    animation: gentleFloat 6s ease-in-out infinite, gentleWave 4s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.2s), calc(var(--i, 0) * 0.1s);
+}
+
+@keyframes gentleWave {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    25% { 
+        transform: translateY(-2px) rotate(0.3deg); 
+    }
+    50% { 
+        transform: translateY(-1px) rotate(0deg); 
+    }
+    75% { 
+        transform: translateY(-3px) rotate(-0.3deg); 
+    }
+}
+
+/* Enhanced loading animation for images */
+.content-image, .hero-main-image, .gallery-image {
+    opacity: 0;
+    animation: imageFadeIn 1s ease-out forwards, gentleFloat 6s ease-in-out infinite 1s;
+}
+
+@keyframes imageFadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translateY(20px) scale(0.9); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+
+/* Gentle parallax for hero image */
+.hero-main-image {
+    animation: gentleFloat 6s ease-in-out infinite, gentleBreath 4s ease-in-out infinite, gentleParallax 8s ease-in-out infinite;
+    animation-delay: 0s, 1s, 2s;
+}
+
+@keyframes gentleParallax {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px); 
+    }
+    25% { 
+        transform: translateY(-2px) translateX(1px); 
+    }
+    50% { 
+        transform: translateY(-4px) translateX(0px); 
+    }
+    75% { 
+        transform: translateY(-1px) translateX(-1px); 
+    }
+}
+
+/* Enhanced mobile responsiveness for image animations */
+@media (max-width: 768px) {
+    .content-image, .hero-main-image, .gallery-image {
+        animation-duration: 8s, 6s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .hero-main-image {
+        animation: gentleFloat 8s ease-in-out infinite, gentleBreath 5s ease-in-out infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-image, .hero-main-image, .gallery-image {
+        animation-duration: 10s, 8s;
+    }
+    
+    /* Reduce animation intensity on small screens */
+    @keyframes gentleFloat {
+        0%, 100% { 
+            transform: translateY(0px) rotate(0deg); 
+        }
+        50% { 
+            transform: translateY(-2px) rotate(0.3deg); 
+        }
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <!-- Loading Screen -->
+        <div id="loadingScreen" class="loading-screen">
+            <div class="loading-content">
+                <div class="loading-logo">11A34</div>
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Đang tải trang web...</div>
+            </div>
+        </div>
+
+        <!-- Welcome Notification -->
+        <div id="welcomeNotification" class="welcome-notification">
+            👋 Chào mừng bạn đến với trang web của lớp 11A34! Hãy tận hưởng trải nghiệm nhé! 👋
+        </div>
+
+        <!-- Sticky Header -->
+        <div id="stickyHeader" class="sticky-header">
+            <div class="sticky-header-content">
+                <!-- Logo bên trái -->
+                <div class="sticky-logo left">
+                    <img src="https://files.catbox.moe/r0i4sf.jpg" alt="Logo 1" class="sticky-logo-img">
+                </div>
+                
+                <!-- Menu navigation ở giữa -->
+                <div class="sticky-center">
+                    <div class="sticky-class-title">11A34</div>
+                    <nav class="sticky-navigation-menu">
+                        <a href="#gioi-thieu" class="sticky-nav-item"> Giới thiệu</a>
+                        <a href="#bieu-tuong" class="sticky-nav-item">Biểu tượng</a>
+                        <a href="#y-nghia" class="sticky-nav-item"> Ý nghĩa</a>
+                        <a href="#hoat-dong" class="sticky-nav-item"> Hoạt động</a>
+                        <a href="#cau-chuyen" class="sticky-nav-item">Câu chuyện</a>
+                        <a href="#pham-chat" class="sticky-nav-item">Phẩm chất</a>
+                        <a href="#tri-an" class="sticky-nav-item">Tri Ân</a>
+                        <a href="#loi-ket" class="sticky-nav-item"> Lời kết</a>
+                    </nav>
+                </div>
+                
+                <!-- Logo bên phải -->
+                <div class="sticky-logo right">
+                    <img src="https://files.catbox.moe/rzllke.png" alt="Logo 2" class="sticky-logo-img">
+                </div>
+                
+                <!-- Mobile Menu Button for Sticky -->
+                <div class="sticky-mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-background">
+                <img src="https://files.catbox.moe/n9km0y.png" alt="Hero Background" class="hero-bg-image" onerror="this.style.display='none'">
+                <div class="hero-fallback-bg"></div>
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-header">
+                    <div class="header-content">
+                        <!-- Logo bên trái -->
+                        <div class="header-logo left">
+                            <img src="https://files.catbox.moe/r0i4sf.jpg" alt="Logo 1" class="logo-img">
+                        </div>
+                        
+                        <!-- Menu navigation ở giữa -->
+                        <div class="header-center">
+                            <div class="class-title">11A34</div>
+                            <nav class="navigation-menu">
+                                <a href="#gioi-thieu" class="nav-item">Giới thiệu</a>
+                                <a href="#bieu-tuong" class="nav-item">Biểu tượng</a>
+                                <a href="#y-nghia" class="nav-item">Ý nghĩa</a>
+                                <a href="#hoat-dong" class="nav-item">Hoạt động</a>
+                                <a href="#cau-chuyen" class="nav-item">Câu chuyện</a>
+                                <a href="#pham-chat" class="nav-item">Phẩm chất</a>
+                                <a href="#tri-an" class="nav-item">Tri Ân</a>
+                                <a href="#loi-ket" class="nav-item">Lời kết</a>
+                            </nav>
+                        </div>
+                        
+                        <!-- Logo bên phải -->
+                        <div class="header-logo right">
+                            <img src="https://files.catbox.moe/rzllke.png" alt="Logo 2" class="logo-img">
+                        </div>
+                        
+                        <!-- Mobile Menu Button -->
+                        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Text Section (tách riêng) -->
+            <div class="hero-text">
+                <div class="hero-text-content">
+                    <h1 class="main-title">Viết về người phụ nữ Việt Nam tôi yêu</h1>
+                    <p class="subtitle" style="text-align: center;">Tôn vinh vẻ đẹp, lòng nhân hậu và bản lĩnh của người phụ nữ Việt Nam</p>
+                    <p class="subtitle" style="text-align: center;">Thực hiện bởi Q.Hoàng lớp 11A34 – Trung tâm GDNN-GDTX Quận 12</p>
+                </div>
+                <div class="hero-image-section">
+                    <img src="https://files.catbox.moe/n9km0y.png" alt="Hero Image" class="hero-main-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="mobile-menu-title">11A34</div>
+                    <div class="mobile-menu-close" onclick="toggleMobileMenu()">&times;</div>
+                </div>
+                <nav class="mobile-navigation">
+                    <a href="#gioi-thieu" class="mobile-nav-item" onclick="toggleMobileMenu()">Giới thiệu</a>
+                    <a href="#bieu-tuong" class="mobile-nav-item" onclick="toggleMobileMenu()">Biểu tượng</a>
+                    <a href="#y-nghia" class="mobile-nav-item" onclick="toggleMobileMenu()">Ý nghĩa</a>
+                    <a href="#hoat-dong" class="mobile-nav-item" onclick="toggleMobileMenu()">Hoạt động</a>
+                    <a href="#cau-chuyen" class="mobile-nav-item" onclick="toggleMobileMenu()">Câu chuyện</a>
+                    <a href="#pham-chat" class="mobile-nav-item" onclick="toggleMobileMenu()">Phẩm chất</a>
+                    <a href="#tri-an" class="mobile-nav-item" onclick="toggleMobileMenu()">Tri Ân</a>
+                    <a href="#loi-ket" class="mobile-nav-item" onclick="toggleMobileMenu()">Lời kết</a>
+                </nav>
+            </div>
+        </div>
+
+        <div id="gioi-thieu" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Giới thiệu chủ đề</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="section-text">
+                    <p>Nhân dịp kỷ niệm 95 năm Ngày thành lập Hội Liên hiệp Phụ nữ Việt Nam (20/10/1930 – 20/10/2025), tập thể lớp 11A34 mang đến dự án nhỏ mang tên <strong>"Viết về người phụ nữ Việt Nam tôi yêu"</strong> — một không gian trực tuyến để gửi lời tri ân và tôn vinh vẻ đẹp của những người phụ nữ Việt Nam trong thời đại mới.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://files.catbox.moe/zaesvw.png" alt="Giới thiệu" class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div id="bieu-tuong" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Biểu tượng của yêu thương và kiên cường</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="section-image">
+                    <img src="https://files.catbox.moe/94s0z8.png" alt="Biểu tượng" class="content-image">
+                </div>
+                <div class="section-text">
+                    <p>Phụ nữ Việt Nam là hình ảnh của lòng hi sinh, sự dịu dàng nhưng kiên cường. Họ vừa là người mẹ, người vợ, người cô giáo — vừa là người tiên phong trong học tập, lao động và sáng tạo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="y-nghia" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Ý nghĩa ngày 20/10</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="section-text">
+                    <p>Ngày 20/10 được chọn là Ngày Phụ nữ Việt Nam nhằm tôn vinh những đóng góp của phụ nữ trong mọi lĩnh vực. Đây là dịp để cả xã hội bày tỏ lòng biết ơn, trân trọng những người phụ nữ xung quanh, đồng thời nhắc nhở mọi người về vai trò quan trọng của họ trong gia đình và cộng đồng.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://files.catbox.moe/ir1nxe.png" alt="Ý nghĩa 20/10" class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div id="hoat-dong" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Hoạt động kỷ niệm 20/10</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="section-text">
+                    <ul class="activities-list">
+                        <li>Viết bài cảm nhận về người phụ nữ Việt Nam mà em yêu quý</li>
+                        <li>Tặng hoa và thiệp chúc mừng đến mẹ, cô giáo và bạn nữ</li>
+                        <li>Tổ chức văn nghệ, hội thi, hoặc dự án chia sẻ cảm xúc</li>
+                        <li>Tạo không gian trực tuyến để học sinh gửi lời tri ân và kỷ niệm</li>
+                    </ul>
+                </div>
+                <div class="section-gallery">
+                    <div class="gallery-item">
+                        <img src="https://files.catbox.moe/kqmml5.png" alt="Hoạt động 1" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://files.catbox.moe/de77vp.png" alt="Hoạt động 2" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://files.catbox.moe/uvar3y.png" alt="Hoạt động 3" class="gallery-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cau-chuyen" class="story-section" onclick="openModal()">
+            <div class="section-header">
+                <h2 class="section-title">Câu chuyện phụ nữ tiêu biểu</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="section-text">
+                    <p>Nhấn vào biểu tượng kính lúp hoặc ảnh để đọc câu chuyện chi tiết.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://files.catbox.moe/664ae6.png" alt="Câu chuyện phụ nữ" class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div id="pham-chat" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Phẩm chất của phụ nữ Việt Nam</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="qualities-grid">
+                    <div class="quality-item">
+                        <div class="quality-icon">💪</div>
+                        <h4>Kiên cường trước thử thách</h4>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-icon">🌸</div>
+                        <h4>Dịu dàng và giàu tình cảm</h4>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-icon">💡</div>
+                        <h4>Sáng tạo và năng động</h4>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-icon">❤️</div>
+                        <h4>Hi sinh vì gia đình và cộng đồng</h4>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://files.catbox.moe/v6p5ur.png" alt="Phẩm chất phụ nữ" class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div id="tri-an" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Tri ân và cảm xúc từ Q.Hoàng</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="section-text">
+                    <p>Em gửi lời cảm ơn sâu sắc đến mẹ, cô giáo và các bạn nữ – những người đã tô đẹp cuộc sống. Ngày 20/10 không chỉ là ngày tri ân, mà còn là dịp để mỗi người nhắc nhớ giá trị yêu thương và tôn trọng.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://files.catbox.moe/0p28cq.png" alt="Tri ân 20/10" class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div id="loi-ket" class="quote-section">
+            <div class="section-header">
+                <h2 class="section-title">Lời kết</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-body">
+                <div class="section-text">
+                    <p><em>"Người phụ nữ Việt Nam – dịu dàng như hoa, mạnh mẽ như thép."</em></p>
+                    <br>
+                    <p>Q.Hoàng lớp 11A34 tự hào được gửi đến các cô, mẹ, chị, bạn nữ lời chúc tốt đẹp nhất – chúc mọi người luôn mạnh khỏe, hạnh phúc và rạng rỡ như những cánh hoa mùa xuân.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://files.catbox.moe/157wj3.jpg" alt="Lời kết" class="content-image">
+                </div>
+            </div>
+            <div class="section-body" style="padding-top: 0;">
+                <div class="section-text" style="flex: 1; width: 100%;">
+                    <video id="loiketVideo" src="https://files.catbox.moe/fld22e.mp4" playsinline autoplay muted loop controls style="width: 100%; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);"></video>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Q.Hoàng lớp 11A34 – Trung tâm GDNN-GDTX Quận 12</p>
+            <p>Thiết kế & thực hiện bởi <span class="author-name" onclick="window.open('https://www.facebook.com/hoangnguyenne', '_blank')">Quang Hoàng</span></p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="storyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Câu chuyện phụ nữ tiêu biểu</h2>
+            <p><strong>Nhấn vào biểu tượng kính lúp để đọc câu chuyện chi tiết</strong></p>
+            <br>
+            <p>Chúng em muốn chia sẻ những câu chuyện nhỏ nhưng đầy cảm hứng: từ mẹ luôn hi sinh âm thầm, cô giáo tận tâm truyền đạt kiến thức, đến những bạn nữ trong lớp năng động, sáng tạo. Mỗi câu chuyện đều thể hiện lòng kiên cường, yêu thương và tinh thần vượt khó.</p>
+            <br>
+            <p><strong>Mẹ tôi</strong> - Người phụ nữ mạnh mẽ nhất tôi từng biết, luôn hy sinh thầm lặng để con cái có cuộc sống tốt đẹp hơn.</p>
+            <p><strong>Cô giáo</strong> - Những người thầy tận tụy, không chỉ truyền đạt kiến thức mà còn dạy cách làm người.</p>
+            <p><strong>Bạn nữ</strong> - Những người bạn đồng hành, cùng nhau học tập, chia sẻ và phát triển.</p>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Loading Screen with smooth transitions
+        window.addEventListener('load', function() {
+            // Preload hero background image
+            const heroImage = new Image();
+            const heroBgImage = document.querySelector('.hero-bg-image');
+            
+            heroImage.onload = function() {
+                console.log('Hero image loaded successfully');
+                if (heroBgImage) {
+                    heroBgImage.style.opacity = '1';
+                }
+            };
+            heroImage.onerror = function() {
+                console.log('Hero image failed to load, using fallback');
+                if (heroBgImage) {
+                    heroBgImage.style.display = 'none';
+                }
+            };
+            heroImage.src = 'https://files.catbox.moe/n9km0y.png';
+            
+            // Enhanced loading sequence
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loadingScreen');
+                loadingScreen.style.transition = 'opacity 0.8s ease, visibility 0.8s ease';
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.visibility = 'hidden';
+                
+                // Add entrance animation for main content
+                document.querySelectorAll('.content-section, .story-section, .quote-section').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.style.opacity = '0';
+                        el.style.transform = 'translateY(30px)';
+                        el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    }, index * 50);
+                });
+                
+                // Hiển thị welcome notification sau khi loading xong với hiệu ứng mượt
+                setTimeout(function() {
+                    const welcomeNotification = document.getElementById('welcomeNotification');
+                    welcomeNotification.style.animation = 'welcomeShow 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards, welcomePulse 2s ease-in-out 0.8s infinite, welcomeHide 0.6s ease 9.2s forwards';
+                    
+                    // Add subtle entrance animation for hero content
+                    const heroText = document.querySelector('.hero-text-content');
+                    if (heroText) {
+                        heroText.style.opacity = '0';
+                        heroText.style.transform = 'translateY(20px)';
+                        heroText.style.transition = 'opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1)';
+                        setTimeout(() => {
+                            heroText.style.opacity = '1';
+                            heroText.style.transform = 'translateY(0)';
+                        }, 200);
+                    }
+                }, 800);
+            }, 2500); // Loading 2.5 giây để có thời gian hiển thị animation
+
+            // Khởi tạo video Lời kết: autoplay (muted) theo policy; bật tiếng sau tương tác
+            const loiketVideo = document.getElementById('loiketVideo');
+            if (loiketVideo) {
+                try {
+                    // Đảm bảo muted để trình duyệt cho phép autoplay
+                    loiketVideo.muted = true;
+                    loiketVideo.volume = 0.0;
+                } catch (e) {}
+                const tryPlay = () => {
+                    const p = loiketVideo.play();
+                    if (p && typeof p.then === 'function') {
+                        p.then(() => {
+                            // Đã phát thành công (đang muted)
+                        }).catch(() => {
+                            // Nếu vẫn bị chặn, sẽ phát sau tương tác
+                        });
+                    }
+                };
+                tryPlay();
+                // Bật tiếng và đặt volume 0.8 sau tương tác đầu tiên của người dùng
+                const enableSoundOnFirstInteraction = () => {
+                    try { loiketVideo.muted = false; loiketVideo.volume = 0.8; } catch (e) {}
+                    loiketVideo.play().catch(() => {});
+                    document.removeEventListener('click', enableSoundOnFirstInteraction);
+                    document.removeEventListener('touchstart', enableSoundOnFirstInteraction);
+                    document.removeEventListener('keydown', enableSoundOnFirstInteraction);
+                };
+                document.addEventListener('click', enableSoundOnFirstInteraction, { once: true });
+                document.addEventListener('touchstart', enableSoundOnFirstInteraction, { once: true });
+                document.addEventListener('keydown', enableSoundOnFirstInteraction, { once: true });
+            }
+        });
+
+        function openModal() {
+            document.getElementById('storyModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('storyModal').style.display = 'none';
+        }
+
+        // Đóng modal khi click bên ngoài
+        window.onclick = function(event) {
+            const modal = document.getElementById('storyModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Hiệu ứng scroll mượt cho navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced scroll animations with staggered effects
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Staggered animation delay for multiple elements
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('animate-in');
+                    }, index * 100); // 100ms delay between each element
+                }
+            });
+        }, observerOptions);
+
+        // Enhanced animations for different element types
+        document.querySelectorAll('.content-section, .story-section, .quote-section').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        // Enhanced animations for quality items
+        document.querySelectorAll('.quality-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px) scale(0.9)';
+            el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            el.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Enhanced animations for gallery images
+        document.querySelectorAll('.gallery-image').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px) rotate(2deg)';
+            el.style.transition = 'opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
+            el.style.transitionDelay = `${index * 0.15}s`;
+            observer.observe(el);
+        });
+
+        // Enhanced animations for activities list
+        document.querySelectorAll('.activities-list li').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateX(-30px)';
+            el.style.transition = 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            el.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Smooth scroll cho header khi click navigation
+        document.querySelectorAll('.nav-item, .sticky-nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const heroHeight = document.querySelector('.hero-section').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - heroHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky Header Scroll Effect
+        let lastScrollTop = 0;
+        const stickyHeader = document.getElementById('stickyHeader');
+        const heroSection = document.querySelector('.hero-section');
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const heroHeight = heroSection.offsetHeight;
+            
+            // Hiển thị sticky header khi scroll xuống qua hero section
+            if (scrollTop > heroHeight) {
+                stickyHeader.classList.add('show');
+            } else {
+                stickyHeader.classList.remove('show');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuBtns = document.querySelectorAll('.mobile-menu-btn, .sticky-mobile-menu-btn');
+            
+            mobileMenuOverlay.classList.toggle('show');
+            
+            mobileMenuBtns.forEach(btn => {
+                btn.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.getElementById('mobileMenuOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+                if (mobileMenuOverlay.classList.contains('show')) {
+                    toggleMobileMenu();
+                }
+            }
+        });
+
+        // Enhanced interactive effects
+        // Add ripple effect to buttons and interactive elements
+        function createRipple(event) {
+            const button = event.currentTarget;
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Add ripple effect to navigation items
+        document.querySelectorAll('.nav-item, .sticky-nav-item, .mobile-nav-item').forEach(item => {
+            item.addEventListener('click', createRipple);
+        });
+
+        // Enhanced parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroSection = document.querySelector('.hero-section');
+            const heroContent = document.querySelector('.hero-text-content');
+            
+            if (heroSection && heroContent) {
+                const rate = scrolled * -0.5;
+                heroContent.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Enhanced mouse tracking for hero section
+        document.addEventListener('mousemove', function(e) {
+            const heroSection = document.querySelector('.hero-section');
+            if (heroSection) {
+                const rect = heroSection.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const moveX = (x - centerX) / 20;
+                const moveY = (y - centerY) / 20;
+                
+                const heroImage = document.querySelector('.hero-main-image');
+                if (heroImage) {
+                    heroImage.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+                }
+            }
+        });
+
+        // Add entrance animation for quality items with stagger
+        const qualityObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                        entry.target.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    }, index * 150);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.quality-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px) scale(0.8)';
+            qualityObserver.observe(item);
+        });
+
+        // Enhanced gallery hover effects
+        document.querySelectorAll('.gallery-image').forEach(image => {
+            image.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(2deg)';
+                this.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+            
+            image.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Add subtle pulse animation to important elements
+        function addPulseAnimation() {
+            const importantElements = document.querySelectorAll('.section-title, .quality-icon');
+            importantElements.forEach(el => {
+                el.style.animation = 'pulse 2s ease-in-out infinite';
+            });
+        }
+
+        // Call pulse animation after page load
+        setTimeout(addPulseAnimation, 3000);
+
+        // Enhanced scroll-triggered animations
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    
+                    // Add special effects for different sections
+                    if (entry.target.classList.contains('content-section')) {
+                        entry.target.style.animation = 'slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    }
+                    
+                    if (entry.target.classList.contains('quality-item')) {
+                        entry.target.style.animation = 'fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    }
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // Observe all animated elements
+        document.querySelectorAll('.content-section, .story-section, .quote-section, .quality-item').forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // ===== ENHANCED IMAGE ANIMATIONS =====
+        
+        // Add staggered animation delays for images
+        document.querySelectorAll('.content-image, .gallery-image').forEach((img, index) => {
+            img.style.setProperty('--i', index);
+        });
+
+        // Enhanced image hover effects with pause animation
+        document.querySelectorAll('.content-image, .hero-main-image, .gallery-image').forEach(img => {
+            img.addEventListener('mouseenter', function() {
+                this.style.animationPlayState = 'paused';
+                this.style.transform = 'scale(1.08) rotate(1deg) translateZ(10px)';
+                this.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
+            });
+            
+            img.addEventListener('mouseleave', function() {
+                this.style.animationPlayState = 'running';
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            });
+        });
+
+        // Gentle mouse tracking for hero image
+        document.addEventListener('mousemove', function(e) {
+            const heroImage = document.querySelector('.hero-main-image');
+            if (heroImage) {
+                const rect = heroImage.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                const moveX = x * 0.05;
+                const moveY = y * 0.05;
+                
+                heroImage.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.02)`;
+            }
+        });
+
+        // Enhanced image loading with fade-in effect
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.style.opacity = '0';
+                    img.style.transform = 'translateY(20px) scale(0.9)';
+                    img.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+                    
+                    setTimeout(() => {
+                        img.style.opacity = '1';
+                        img.style.transform = 'translateY(0) scale(1)';
+                    }, 200);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all images for loading animation
+        document.querySelectorAll('.content-image, .hero-main-image, .gallery-image').forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Gentle parallax effect for images on scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const images = document.querySelectorAll('.content-image, .gallery-image');
+            
+            images.forEach((img, index) => {
+                const rect = img.getBoundingClientRect();
+                const speed = 0.1 + (index * 0.05);
+                const yPos = -(scrolled * speed);
+                img.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+
+        // Enhanced gallery image interactions
+        document.querySelectorAll('.gallery-image').forEach((img, index) => {
+            img.addEventListener('mouseenter', function() {
+                this.style.animationPlayState = 'paused';
+                this.style.transform = 'scale(1.1) rotate(2deg) translateZ(5px)';
+                this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+                this.style.zIndex = '10';
+            });
+            
+            img.addEventListener('mouseleave', function() {
+                this.style.animationPlayState = 'running';
+                this.style.transform = '';
+                this.style.boxShadow = '';
+                this.style.zIndex = '';
+            });
+        });
+
+        // Gentle breathing effect for hero image
+        function addBreathingEffect() {
+            const heroImage = document.querySelector('.hero-main-image');
+            if (heroImage) {
+                setInterval(() => {
+                    heroImage.style.transform = 'scale(1.02)';
+                    setTimeout(() => {
+                        heroImage.style.transform = 'scale(1)';
+                    }, 1000);
+                }, 3000);
+            }
+        }
+
+        // Start breathing effect after page load
+        setTimeout(addBreathingEffect, 2000);
+
+        // Enhanced image shimmer effect on hover
+        document.querySelectorAll('.content-image, .hero-main-image, .gallery-image').forEach(img => {
+            img.addEventListener('mouseenter', function() {
+                const shimmer = document.createElement('div');
+                shimmer.style.position = 'absolute';
+                shimmer.style.top = '0';
+                shimmer.style.left = '-100%';
+                shimmer.style.width = '100%';
+                shimmer.style.height = '100%';
+                shimmer.style.background = 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)';
+                shimmer.style.animation = 'imageShimmer 0.6s ease-out';
+                shimmer.style.pointerEvents = 'none';
+                shimmer.style.zIndex = '2';
+                
+                this.appendChild(shimmer);
+                
+                setTimeout(() => {
+                    shimmer.remove();
+                }, 600);
+            });
+        });
+
+        // Gentle rotation for logo images
+        document.querySelectorAll('.logo-img, .sticky-logo-img').forEach(logo => {
+            logo.addEventListener('mouseenter', function() {
+                this.style.animationPlayState = 'paused';
+                this.style.transform = 'scale(1.15) rotate(5deg) translateZ(5px)';
+            });
+            
+            logo.addEventListener('mouseleave', function() {
+                this.style.animationPlayState = 'running';
+                this.style.transform = '';
+            });
+        });
+
+        // Enhanced image loading with progressive enhancement
+        function enhanceImageAnimations() {
+            document.querySelectorAll('.content-image, .hero-main-image, .gallery-image').forEach((img, index) => {
+                // Add random delay for more natural animation
+                const randomDelay = Math.random() * 2;
+                img.style.animationDelay = `${randomDelay}s`;
+                
+                // Add subtle random rotation
+                const randomRotation = (Math.random() - 0.5) * 2;
+                img.style.setProperty('--random-rotation', `${randomRotation}deg`);
+            });
+        }
+
+        // Apply enhanced animations after page load
+        setTimeout(enhanceImageAnimations, 1000);
+    </script>
+</body>
+</html>
